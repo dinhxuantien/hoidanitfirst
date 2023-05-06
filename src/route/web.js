@@ -12,9 +12,13 @@ let initWebRoutes = (app) => {
     router.get('/edit-crud', homeController.getEditCRUD);
     router.post('/put-crud', homeController.putCRUD);
     router.get('/delete-crud', homeController.deleteCRUD);
+    router.get('/viewer', homeController.viewertest);
 
     router.post('/api/login', userController.handleLogin);
-
+    router.get('/api/get-all-users', userController.handleGetAllUsers);
+    router.put('/api/edit-users', userController.handleEditUsers);
+    router.post('/api/create-new-users', userController.handleCreateNewUsers);
+    router.delete('/api/delete-users', userController.handleDeleteUsers);
     return app.use("/", router);
 }
 module.exports = initWebRoutes;

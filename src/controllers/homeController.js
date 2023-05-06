@@ -74,6 +74,13 @@ let deleteCRUD = async (req, res) => {
 //     key: '',
 //     value:''
 // }
+let viewertest = (req, res) => {
+
+    return res.render('test/viewertest.ejs')
+}
+// let getAboutPage = (req, res) => {
+//     return res.render('test/about.ejs');
+// }
 module.exports = {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,
@@ -83,4 +90,5 @@ module.exports = {
     getEditCRUD: getEditCRUD,
     putCRUD: putCRUD,
     deleteCRUD: deleteCRUD,
+    viewertest: viewertest
 }
